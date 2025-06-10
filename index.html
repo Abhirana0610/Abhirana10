@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  </style>
+  <title>Abhishek Kumar | Mechanical Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --primary: #003049;
+      --accent: #f77f00;
+      --light: #fdf0d5;
+      --dark: #1d1d1d;
+      --gray: #eaeaea;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 20% 20%, #3f6faa, transparent 40%),
+        radial-gradient(circle at 80% 70%, #a38dde, transparent 50%),
+        linear-gradient(135deg, #6484d6 0%, #49b0e0 30%, #647edc 60%, #5f7dd0 100%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      min-height: 100vh;
+      color: var(--dark);
+      line-height: 1.6;
+      box-shadow: inset 0 0 40px #a0b4f7;
+      transition: background 0.5s ease;
+    }
+    header,
+    footer {
+      background-color: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 0 0 20px 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      backdrop-filter: saturate(180%) blur(15px);
+      background: rgba(255 255 255 / 0.85);
+      border-radius: 24px;
+      box-shadow:
+        8px 8px 24px rgba(0, 0, 0, 0.1),
+        -8px -8px 24px rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .section {
+      padding: 50px 40px;
+      margin-bottom: 50px;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: var(--primary);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    }
+    .section p {
+      font-size: 1.05rem;
+      color: #333;
+      text-align: justify;
+    }
+    .college-img {
+      display: block;
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 0 auto 20px;
+      box-shadow:
+        8px 8px 20px rgba(0, 0, 0, 0.1),
+        -8px -8px 20px rgba(255, 255, 255, 0.7);
+    }
+    /* Skills grid */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+    .skill {
+      background: linear-gradient(
+        145deg,
+        #e0e0e0,
+        #ffffff
+      );
+      box-shadow:
+        8px 8px 15px #bebebe,
+        -8px -8px 15px #ffffff;
+      padding: 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      color: #333;
+      font-size: 1.1rem;
+      user-select: none;
+      position: relative;
+    }
+    .skill i {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      transition: transform 0.4s ease;
+    }
+    /* Vibrant colors */
+    .skill:nth-child(1) {
+      background: linear-gradient(145deg, #ff7e5f, #feb47b);
+      box-shadow: 8px 8px 15px #c65c3a, -8px -8px 15px #ffaf78;
+      color: white;
+    }
+    .skill:nth-child(2) {
+      background: linear-gradient(145deg, #6a11cb, #2575fc);
+      box-shadow: 8px 8px 15px #1d33b8, -8px -8px 15px #6882fc;
+      color: white;
+    }
+    .skill:nth-child(3) {
+      background: linear-gradient(145deg, #11998e, #38ef7d);
+      box-shadow: 8px 8px 15px #0a725f, -8px -8px 15px #32d36b;
+      color: white;
+    }
+    .skill:nth-child(4) {
+      background: linear-gradient(145deg, #fc5c7d, #6a82fb);
+      box-shadow: 8px 8px 15px #b04a67, -8px -8px 15px #8e9cff;
+      color: white;
+    }
+    .skill:nth-child(5) {
+      background: linear-gradient(145deg, #f7971e, #ffd200);
+      box-shadow: 8px 8px 15px #b67700, -8px -8px 15px #ffea36;
+      color: white;
+    }
+    .skill:nth-child(6) {
+      background: linear-gradient(145deg, #00c6ff, #0072ff);
+      box-shadow: 8px 8px 15px #0071cc, -8px -8px 15px #39a9ff;
+      color: white;
+    }
+    .skill:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow:
+        12px 12px 25px #888888,
+        -12px -12px 25px #ffffff;
+      filter: brightness(1.1);
+      color: white;
+    }
+    .skill:hover i {
+      transform: rotate(10deg) scale(1.2);
+    }
+    /* Skill description box */
+    .skill-description {
+      display: none;
+      margin-top: 12px;
+      background: #fff;
+      color: #333;
+      padding: 12px 15px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      box-shadow:
+        2px 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    /* Clubs styling */
+    .club-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .club {
+      width: 150px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .club:hover {
+      transform: scale(1.1);
+    }
+    .club img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      background: #fff;
+      padding: 8px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+    .club-description {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95rem;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 8px;
+      color: #222;
+      text-align: center;
+    }
+
+    /* Contact Icons */
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    .contact-icons a {
+      background: linear-gradient(145deg, #ff416c, #ff4b2b);
+      padding: 18px;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow:
+        8px 8px 15px #b5361d,
+        -8px -8px 15px #ff6e51;
+      transition: all 0.4s ease;
+    }
+    .contact-icons a:nth-child(2) {
+      background: linear-gradient(145deg, #00c6ff, #0072ff);
+      box-shadow:
+        8px 8px 15px #005bbf,
+        -8px -8px 15px #39a9ff;
+    }
+    .contact-icons a:hover {
+      transform: scale(1.3) rotate(15deg);
+      filter: brightness(1.2);
+      box-shadow:
+        12px 12px 25px #777,
+        -12px -12px 25px #fff;
+    }
+    .contact-icons img {
+      width: 28px;
+      height: 28px;
+      filter: brightness(0) invert(1);
+    }
+    footer p {
+      font-size: 0.9rem;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Abhishek Kumar</h1>
+    <p>Mechanical Engineering Student | Rungta College, Bhilai</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm <strong>Abhishek Kumar</strong>, a Mechanical Engineering
+        student at Rungta College, Bhilai. Passionate about engineering
+        innovation, community service, and leadership, I contribute actively to
+        NSS, GDG,and MLSA. I strive to apply engineering principles to
+        real-world challenges and cultivate a collaborative mindset.
+      </p>
+    </section>
+
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <img
+        src="https://images.shiksha.com/mediadata/images/1707981515phpni9GBa.jpeg"
+        alt="Rungta College"
+        class="college-img"
+      />
+      <p>
+        <strong>Rungta College of Engineering & Technology, Bhilai</strong
+        ><br />
+        Bachelor of Technology (B.Tech) in Mechanical Engineering<br />
+        <em>Expected Graduation:</em> 2024
+      </p>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills & Interests</h2>
+      <div class="skills">
+        <div class="skill" onclick="toggleSkillDesc('desc-solidworks')">
+          <i class="fas fa-cogs"></i>SolidWorks
+          <div class="skill-description" id="desc-solidworks">
+            Proficient in 3D CAD modeling, assembly, and simulation using SolidWorks.
+          </div>
+        </div>
+        <div class="skill" onclick="toggleSkillDesc('desc-autocad')">
+          <i class="fas fa-drafting-compass"></i>AutoCAD
+          <div class="skill-description" id="desc-autocad">
+            Skilled in creating detailed 2D drawings and technical schematics using AutoCAD.
+          </div>
+        </div>
+        <div class="skill" onclick="toggleSkillDesc('desc-matlab')">
+          <i class="fas fa-wave-square"></i>MATLAB
+          <div class="skill-description" id="desc-matlab">
+            Experienced in numerical analysis, simulation, and data visualization with MATLAB.
+          </div>
+        </div>
+        <div class="skill" onclick="toggleSkillDesc('desc-cpp-java')">
+          <i class="fas fa-code"></i>C++
+          <div class="skill-description" id="desc-cpp-java">
+            Programming knowledge in C++ for problem-solving and software development.
+          </div>
+        </div>
+        <div class="skill" onclick="toggleSkillDesc('desc-leadership')">
+          <i class="fas fa-user-tie"></i>Leadership
+          <div class="skill-description" id="desc-leadership">
+            Strong leadership skills demonstrated through organizing events and guiding teams.
+          </div>
+        </div>
+        <div class="skill" onclick="toggleSkillDesc('desc-teamwork')">
+          <i class="fas fa-people-group"></i>Teamwork
+          <div class="skill-description" id="desc-teamwork">
+            Excellent collaborator who thrives in multidisciplinary team environments.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="clubs">
+      <h2>Clubs & Activities</h2>
+      <div class="club-list">
+        <div class="club" onclick="toggleDesc('nss')">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuhpb0zIRekPYku0ZiKSp8t1CjrEZfSLS4bg&s"
+            alt="NSS Logo"
+          />
+          <h4>NSS</h4>
+          <p class="club-description" id="nss">
+            The National Service Scheme (NSS) fosters social responsibility and
+            community development among students. We actively engage in social
+            campaigns, environmental drives, and helping rural communities.
+          </p>
+        </div>
+        <div class="club" onclick="toggleDesc('gdg')">
+          <img
+            src="data:image/png;base64,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"
+            alt="GDG Logo"
+          />
+          <h4>GDG</h4>
+          <p class="club-description" id="gdg">
+            Google Developer Group (GDG) provides opportunities to explore
+            cutting-edge technologies, attend developer meetups, and build
+            technical projects in a collaborative environment.
+          </p>
+        </div>
+        <div class="club" onclick="toggleDesc('mlsa')">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="MLSA Logo"
+          />
+          <h4>MLSA</h4>
+          <p class="club-description" id="mlsa">
+            Microsoft Learn Student Ambassadors (MLSA) is a program where
+            students share tech knowledge, host events, and support peers in
+            learning cloud computing, AI, and app development.
+          </p>
+        </div>
+ 
+    <section class="section" 
+    
+    
+
+      id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-icons">
+        <a
+        href= "mailto:abhishekrana9334203764@gmail.com"
+          title="Email"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+            alt="Email"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/abhishek-kumar-81941b2a7"
+          target="_blank"
+          title="LinkedIn"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            alt="LinkedIn"
+        /></a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Abhishek Kumar | Crafted with passion & precision</p>
+  </footer>
+
+  <script>
+    function toggleDesc(id) {
+      const desc = document.getElementById(id);
+      desc.style.display = desc.style.display === "block" ? "none" : "block";
+    }
+    function toggleSkillDesc(id) {
+      const desc = document.getElementById(id);
+      desc.style.display = desc.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
